@@ -102,16 +102,32 @@ export default function SicoiLandingPage() {
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-200 selection:bg-cyan-500/30 overflow-hidden font-sans">
-      {/* Header / Logo */}
       <header className="absolute top-0 left-0 w-full z-50 py-8 px-6 lg:px-8 max-w-7xl mx-auto flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-cyan-600 to-blue-600 flex items-center justify-center shadow-[0_0_20px_rgba(6,182,212,0.4)]">
-            <Activity className="w-7 h-7 text-white" />
+        <div className="flex items-center gap-4">
+          <div className="w-16 h-16 rounded-xl bg-gradient-to-tr from-cyan-600 to-blue-600 flex items-center justify-center shadow-[0_0_20px_rgba(6,182,212,0.4)]">
+            <Activity className="w-10 h-10 text-white" />
           </div>
           <div className="flex flex-col">
-            <span className="text-3xl font-black tracking-tight text-white leading-none">SICOI</span>
-            <span className="text-[11px] text-cyan-400 font-bold uppercase tracking-widest mt-1">Sistema de Controle Industrial</span>
+            <span className="text-5xl font-black tracking-tight text-white leading-none">SICOI</span>
+            <span className="text-sm text-cyan-400 font-bold uppercase tracking-widest mt-1">Sistema de Controle Industrial</span>
           </div>
+        </div>
+
+        <motion.div 
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center gap-2 px-4 py-2 rounded-full bg-slate-900/50 border border-slate-800 text-cyan-400 text-sm font-medium backdrop-blur-md"
+        >
+          <Zap className="w-4 h-4 text-amber-400" />
+          <span>A Revolução da Indústria 4.0 Chegou</span>
+        </motion.div>
+
+        <div>
+          <button className="group relative px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-bold rounded-xl shadow-[0_0_20px_rgba(6,182,212,0.4)] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(6,182,212,0.6)] flex items-center justify-center gap-2 text-sm">
+            Agendar Demonstração
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </button>
         </div>
       </header>
 
@@ -120,48 +136,72 @@ export default function SicoiLandingPage() {
       <div className="fixed bottom-[-20%] right-[-10%] w-[50%] h-[50%] rounded-full bg-amber-500/10 blur-[120px] pointer-events-none" />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-6 lg:px-8 max-w-7xl mx-auto flex flex-col items-center text-center">
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/50 border border-slate-800 text-cyan-400 text-sm font-medium mb-8 backdrop-blur-md"
-        >
-          <Zap className="w-4 h-4 text-amber-400" />
-          <span>A Revolução da Indústria 4.0 Chegou</span>
-        </motion.div>
-        
+      <section className="relative pt-48 pb-20 px-6 lg:px-8 max-w-7xl mx-auto">
         <motion.h1 
-          className="text-5xl md:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight"
+          className="text-3xl md:text-5xl font-extrabold tracking-tight text-white mb-16 text-center leading-tight max-w-4xl mx-auto"
           {...fadeInUp}
         >
-          Gerenciamento de setores na palma da mão - <br className="hidden md:block"/><span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-600">Eficiência e Tecnologia</span>
+          Gerenciamento de setores na palma da mão - <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-600">Eficiência e Tecnologia</span>
         </motion.h1>
-        
-        <motion.p 
-          className="mt-4 text-xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed"
-          {...fadeInUp}
-          transition={{ delay: 0.2 }}
-        >
-          O <strong>Sicoi</strong> é o sistema nervoso digital da sua indústria. Transforme processos manuais e planilhas obsoletas em uma central de comando auditável, preditiva e altamente lucrativa.
-        </motion.p>
-        
-        <motion.div 
-          className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center"
-          {...fadeInUp}
-          transition={{ delay: 0.3 }}
-        >
-          <button className="group relative px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-bold rounded-xl shadow-[0_0_20px_rgba(6,182,212,0.4)] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(6,182,212,0.6)] flex items-center justify-center gap-2">
-            Agendar Demonstração
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </button>
-          <button className="px-8 py-4 bg-slate-900/50 hover:bg-slate-800/80 border border-slate-700 hover:border-slate-500 text-white font-semibold rounded-xl backdrop-blur-md transition-all duration-300 flex flex-col items-center justify-center group">
-            <span className="flex items-center gap-2 text-base">Impacto do Sistema <BarChart3 className="w-5 h-5 text-amber-400 group-hover:scale-110 transition-transform" /></span>
-            <span className="text-xs text-cyan-400 mt-1 font-bold">+45% Eficiência &bull; -80% Paradas</span>
-          </button>
-        </motion.div>
 
+        {/* Row 1: Texto na Esquerda, Imagem na Direita */}
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+          <div className="w-full lg:w-3/5 text-left">
+            <motion.p 
+              className="mt-6 text-2xl lg:text-3xl text-slate-300 font-medium max-w-xl mb-12 leading-relaxed"
+              {...fadeInUp}
+              transition={{ delay: 0.2 }}
+            >
+              O <strong className="text-white font-extrabold">Sicoi</strong> é o sistema nervoso digital da sua indústria. Transforme processos manuais e planilhas obsoletas em uma central de comando auditável, preditiva e altamente lucrativa.
+            </motion.p>
+          </div>
 
+          <motion.div
+            className="w-full lg:w-2/5 rounded-3xl overflow-hidden border border-slate-800 shadow-[0_0_50px_rgba(6,182,212,0.15)] relative"
+            {...fadeInUp}
+            transition={{ delay: 0.4 }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent z-10 pointer-events-none" />
+            <img 
+              src="/female_operator_qr.png" 
+              alt="Operadora inspecionando máquina industrial com celular" 
+              className="w-full h-[220px] md:h-[280px] object-cover hover:scale-105 transition-transform duration-700"
+            />
+          </motion.div>
+        </div>
+
+        {/* Row 2: Imagem na Esquerda, Texto na Direita */}
+        <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16 mt-24">
+          <motion.div
+            className="w-full lg:w-2/5 rounded-3xl overflow-hidden border border-slate-800 shadow-[0_0_50px_rgba(245,158,11,0.15)] relative"
+            {...fadeInUp}
+            transition={{ delay: 0.6 }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent z-10 pointer-events-none" />
+            <img 
+              src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+              alt="Controle de processos na indústria" 
+              className="w-full h-[200px] md:h-[260px] object-cover hover:scale-105 transition-transform duration-700"
+            />
+          </motion.div>
+
+          <div className="w-full lg:w-3/5 text-left">
+            <motion.h2 
+              className="text-3xl md:text-5xl font-bold tracking-tight text-white mb-6"
+              {...fadeInUp}
+              transition={{ delay: 0.5 }}
+            >
+              Monitoramento <br className="hidden lg:block"/><span className="text-cyan-400">Em Tempo Real</span>
+            </motion.h2>
+            <motion.p 
+              className="text-lg text-slate-400 max-w-xl leading-relaxed"
+              {...fadeInUp}
+              transition={{ delay: 0.7 }}
+            >
+              Onde quer que você esteja, a saúde da sua operação industrial está a um clique. Visualize painéis precisos, identifique gargalos instantaneamente e mantenha seus KPIs sob controle constante.
+            </motion.p>
+          </div>
+        </div>
       </section>
 
       {/* Simulador do Portal SICOI */}
