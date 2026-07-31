@@ -123,7 +123,7 @@ export default function SicoiLandingPage() {
           <span>A Revolução da Indústria 4.0 Chegou</span>
         </motion.div>
 
-        <div>
+        <div className="fixed top-6 right-6 lg:top-8 lg:right-10 z-[100]">
           <button className="group relative px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-bold rounded-xl shadow-[0_0_20px_rgba(6,182,212,0.4)] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(6,182,212,0.6)] flex items-center justify-center gap-2 text-sm">
             Agendar Demonstração
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -146,7 +146,7 @@ export default function SicoiLandingPage() {
 
         {/* Row 1: Texto na Esquerda, Imagem na Direita */}
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-          <div className="w-full lg:w-3/5 text-left">
+          <div className="w-full lg:w-1/2 text-left">
             <motion.p 
               className="mt-6 text-2xl lg:text-3xl text-slate-300 font-medium max-w-xl mb-12 leading-relaxed"
               {...fadeInUp}
@@ -157,7 +157,7 @@ export default function SicoiLandingPage() {
           </div>
 
           <motion.div
-            className="w-full lg:w-2/5 rounded-3xl overflow-hidden border border-slate-800 shadow-[0_0_50px_rgba(6,182,212,0.15)] relative"
+            className="w-full lg:w-1/2 rounded-3xl overflow-hidden border border-slate-800 shadow-[0_0_50px_rgba(6,182,212,0.15)] relative"
             {...fadeInUp}
             transition={{ delay: 0.4 }}
           >
@@ -165,7 +165,7 @@ export default function SicoiLandingPage() {
             <img 
               src="/female_operator_qr.png" 
               alt="Operadora inspecionando máquina industrial com celular" 
-              className="w-full h-[220px] md:h-[280px] object-cover hover:scale-105 transition-transform duration-700"
+              className="w-full h-[300px] md:h-[400px] lg:h-[450px] object-cover hover:scale-105 transition-transform duration-700"
             />
           </motion.div>
         </div>
@@ -173,7 +173,7 @@ export default function SicoiLandingPage() {
         {/* Row 2: Imagem na Esquerda, Texto na Direita */}
         <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16 mt-24">
           <motion.div
-            className="w-full lg:w-2/5 rounded-3xl overflow-hidden border border-slate-800 shadow-[0_0_50px_rgba(245,158,11,0.15)] relative"
+            className="w-full lg:w-1/2 rounded-3xl overflow-hidden border border-slate-800 shadow-[0_0_50px_rgba(245,158,11,0.15)] relative"
             {...fadeInUp}
             transition={{ delay: 0.6 }}
           >
@@ -181,11 +181,11 @@ export default function SicoiLandingPage() {
             <img 
               src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
               alt="Controle de processos na indústria" 
-              className="w-full h-[200px] md:h-[260px] object-cover hover:scale-105 transition-transform duration-700"
+              className="w-full h-[280px] md:h-[380px] lg:h-[420px] object-cover hover:scale-105 transition-transform duration-700"
             />
           </motion.div>
 
-          <div className="w-full lg:w-3/5 text-left">
+          <div className="w-full lg:w-1/2 text-left">
             <motion.h2 
               className="text-3xl md:text-5xl font-bold tracking-tight text-white mb-6"
               {...fadeInUp}
@@ -263,7 +263,7 @@ export default function SicoiLandingPage() {
             {/* 1. Ferramentaria */}
             <motion.div 
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
-              className="bg-[#0A111F] border border-slate-800 rounded-xl p-6 relative group overflow-hidden cursor-pointer transition-all duration-300 hover:scale-[1.05] hover:shadow-[0_20px_50px_-10px_rgba(245,158,11,0.2)] hover:z-10 flex flex-col h-full"
+              className="bg-[#0A111F] border border-slate-800 rounded-xl p-6 relative group overflow-hidden cursor-pointer transition-all duration-500 hover:scale-[1.20] hover:-translate-y-6 hover:shadow-[0_40px_80px_-10px_rgba(245,158,11,0.5)] hover:z-50 hover:border-amber-500/50 flex flex-col h-full"
             >
               <div className="absolute left-0 top-0 bottom-0 w-1 bg-amber-600 shadow-[0_0_15px_rgba(217,119,6,0.8)] group-hover:w-2 transition-all"></div>
               <div className="w-10 h-10 border border-slate-700 rounded-lg flex items-center justify-center mb-6 group-hover:border-amber-500/50 transition-colors">
@@ -282,7 +282,7 @@ export default function SicoiLandingPage() {
             {/* 2. Qualidade */}
             <motion.div 
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
-              className="bg-[#0A111F] border border-slate-800 rounded-xl p-6 relative group overflow-hidden cursor-pointer transition-all duration-300 hover:scale-[1.05] hover:shadow-[0_20px_50px_-10px_rgba(6,182,212,0.2)] hover:z-10 flex flex-col h-full"
+              className="bg-[#0A111F] border border-slate-800 rounded-xl p-6 relative group overflow-hidden cursor-pointer transition-all duration-500 hover:scale-[1.20] hover:-translate-y-6 hover:shadow-[0_40px_80px_-10px_rgba(6,182,212,0.5)] hover:z-50 hover:border-cyan-500/50 flex flex-col h-full"
             >
               <div className="absolute left-0 top-0 bottom-0 w-1 bg-cyan-500 shadow-[0_0_15px_rgba(6,182,212,0.8)] group-hover:w-2 transition-all"></div>
               <div className="w-10 h-10 border border-slate-700 rounded-lg flex items-center justify-center mb-6 group-hover:border-cyan-500/50 transition-colors">
@@ -301,7 +301,7 @@ export default function SicoiLandingPage() {
             {/* 3. Engenharia */}
             <motion.div 
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}
-              className="bg-[#0A111F] border border-slate-800 rounded-xl p-6 relative group overflow-hidden cursor-pointer transition-all duration-300 hover:scale-[1.05] hover:shadow-[0_20px_50px_-10px_rgba(16,185,129,0.2)] hover:z-10 flex flex-col h-full"
+              className="bg-[#0A111F] border border-slate-800 rounded-xl p-6 relative group overflow-hidden cursor-pointer transition-all duration-500 hover:scale-[1.20] hover:-translate-y-6 hover:shadow-[0_40px_80px_-10px_rgba(16,185,129,0.5)] hover:z-50 hover:border-emerald-500/50 flex flex-col h-full"
             >
               <div className="absolute left-0 top-0 bottom-0 w-1 bg-emerald-500 shadow-[0_0_15px_rgba(16,185,129,0.8)] group-hover:w-2 transition-all"></div>
               <div className="w-10 h-10 border border-slate-700 rounded-lg flex items-center justify-center mb-6 group-hover:border-emerald-500/50 transition-colors">
@@ -320,7 +320,7 @@ export default function SicoiLandingPage() {
             {/* 4. Projetos */}
             <motion.div 
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }}
-              className="bg-[#0A111F] border border-slate-800 rounded-xl p-6 relative group overflow-hidden cursor-pointer transition-all duration-300 hover:scale-[1.05] hover:shadow-[0_20px_50px_-10px_rgba(244,63,94,0.2)] hover:z-10 flex flex-col h-full"
+              className="bg-[#0A111F] border border-slate-800 rounded-xl p-6 relative group overflow-hidden cursor-pointer transition-all duration-500 hover:scale-[1.20] hover:-translate-y-6 hover:shadow-[0_40px_80px_-10px_rgba(244,63,94,0.5)] hover:z-50 hover:border-rose-500/50 flex flex-col h-full"
             >
               <div className="absolute left-0 top-0 bottom-0 w-1 bg-rose-500 shadow-[0_0_15px_rgba(244,63,94,0.8)] group-hover:w-2 transition-all"></div>
               <div className="w-10 h-10 border border-slate-700 rounded-lg flex items-center justify-center mb-6 group-hover:border-rose-500/50 transition-colors">
@@ -339,7 +339,7 @@ export default function SicoiLandingPage() {
             {/* 5. Manutenção Industrial */}
             <motion.div 
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.5 }}
-              className="bg-[#0A111F] border border-slate-800 rounded-xl p-6 relative group overflow-hidden cursor-pointer transition-all duration-300 hover:scale-[1.05] hover:shadow-[0_20px_50px_-10px_rgba(59,130,246,0.2)] hover:z-10 flex flex-col h-full"
+              className="bg-[#0A111F] border border-slate-800 rounded-xl p-6 relative group overflow-hidden cursor-pointer transition-all duration-500 hover:scale-[1.20] hover:-translate-y-6 hover:shadow-[0_40px_80px_-10px_rgba(59,130,246,0.5)] hover:z-50 hover:border-blue-500/50 flex flex-col h-full"
             >
               <div className="absolute left-0 top-0 bottom-0 w-1 bg-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.8)] group-hover:w-2 transition-all"></div>
               <div className="w-10 h-10 border border-slate-700 rounded-lg flex items-center justify-center mb-6 group-hover:border-blue-500/50 transition-colors">
@@ -360,28 +360,28 @@ export default function SicoiLandingPage() {
       </section>
 
       {/* Preview do Sistema - Showcase Automático */}
-      <section className="py-24 px-6 lg:px-8 max-w-7xl mx-auto relative z-10 border-t border-slate-800/50">
+      <section className="py-24 px-4 lg:px-8 max-w-[1600px] mx-auto relative z-10 border-t border-slate-800/50">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">O Poder na sua <span className="text-amber-400">Tela</span></h2>
           <p className="text-slate-400 max-w-2xl mx-auto text-lg">Passe o mouse sobre os módulos abaixo para visualizar a interface real do SICOI em ação.</p>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-8 items-center bg-slate-900/40 p-4 md:p-8 rounded-3xl border border-slate-800 backdrop-blur-md shadow-2xl">
+        <div className="flex flex-col lg:flex-row gap-10 items-center bg-slate-900/40 p-6 md:p-12 rounded-[2.5rem] border border-slate-800 backdrop-blur-md shadow-2xl">
           {/* Tabs Navigation */}
-          <div className="flex lg:flex-col gap-4 w-full lg:w-1/3 overflow-x-auto pb-4 lg:pb-0 scrollbar-hide">
+          <div className="flex lg:flex-col gap-6 w-full lg:w-1/3 overflow-x-auto pb-4 lg:pb-0 scrollbar-hide">
             {showcaseData.map((theme, idx) => (
               <div
                 key={theme.id}
                 onMouseEnter={() => handleThemeHover(idx)}
                 onClick={() => handleThemeHover(idx)} // Para quem estiver no mobile / touch
-                className={`flex flex-col items-start p-5 rounded-xl text-left transition-all duration-300 min-w-[260px] lg:min-w-0 border-l-4 cursor-pointer ${
+                className={`flex flex-col items-start p-6 rounded-2xl text-left transition-all duration-300 min-w-[280px] lg:min-w-0 border-l-[6px] cursor-pointer ${
                   activeThemeIndex === idx 
-                  ? 'bg-gradient-to-r from-cyan-500/20 to-transparent border-cyan-500 text-white shadow-[0_0_15px_rgba(6,182,212,0.1)]' 
+                  ? 'bg-gradient-to-r from-cyan-500/20 to-transparent border-cyan-500 text-white shadow-[0_0_20px_rgba(6,182,212,0.15)]' 
                   : 'hover:bg-slate-800/50 text-slate-400 border-transparent hover:text-slate-200'
                 }`}
               >
-                <span className={`text-xl font-bold mb-2 ${activeThemeIndex === idx ? 'text-cyan-400' : ''}`}>{theme.title}</span>
-                <span className="text-sm opacity-80 mb-4">{theme.desc}</span>
+                <span className={`text-2xl font-bold mb-3 ${activeThemeIndex === idx ? 'text-cyan-400' : ''}`}>{theme.title}</span>
+                <span className="text-base opacity-90 mb-5 leading-relaxed">{theme.desc}</span>
                 
                 {/* Progress Indicators for images */}
                 {activeThemeIndex === idx && (
@@ -401,15 +401,15 @@ export default function SicoiLandingPage() {
           </div>
 
           {/* Image Display */}
-          <div className="w-full lg:w-2/3 relative aspect-video bg-slate-950 rounded-2xl border border-slate-800 overflow-hidden shadow-2xl shadow-black/50">
+          <div className="w-full lg:w-2/3 relative aspect-video bg-slate-950 rounded-2xl border border-slate-800 overflow-hidden shadow-2xl shadow-black/50" style={{ perspective: 1200 }}>
             <AnimatePresence mode="wait">
               <motion.div
                 key={`${activeThemeIndex}-${activeImageIndex}`}
-                initial={{ opacity: 0, scale: 0.98, filter: 'blur(5px)' }}
-                animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
-                exit={{ opacity: 0, scale: 1.02, filter: 'blur(5px)' }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
-                className="absolute inset-0 w-full h-full"
+                initial={{ opacity: 0, rotateY: 90, scale: 0.9 }}
+                animate={{ opacity: 1, rotateY: 0, scale: 1 }}
+                exit={{ opacity: 0, rotateY: -90, scale: 0.9 }}
+                transition={{ duration: 0.4, ease: "easeInOut" }}
+                className="absolute inset-0 w-full h-full origin-center"
               >
                 <img 
                   src={showcaseData[activeThemeIndex].images[activeImageIndex]} 
